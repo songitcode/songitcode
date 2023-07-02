@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.data {
+    font-weight: 700;
+    font-size: large;
+}
+
+.container {
+    padding: 0 100px 0 100px;
+}
