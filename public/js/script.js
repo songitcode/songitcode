@@ -26,15 +26,19 @@ inputEmail.addEventListener('focusout', checkInputEmail);
 
 // xử lý submit
 let submitEmail = document.getElementById('submit-btn');
-let dataInput = document.getElementById('data-input');
+
 
 submitEmail.addEventListener('click', function (event) {
     event.preventDefault(); // Ngăn chặn hành vi mặc định của nút submit
 
+    let email = document.getElementById('email').value;
+
     // kiểm tra dữ liệu 
-    if (checkInputEmail()) {
+    if (checkInputEmail() && email.trim() !== '') {
+        // lưu email vào localStorage
+        localStorage.setItem('email', email);
+        // qua trang submit.html
         window.location.href = 'submit.html';
-        dataInput.innerHTML = `<p><strong>${inputEmail}</strong></p>`
         return true;
     }
     else {
