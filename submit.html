@@ -8,8 +8,32 @@
     <link rel="stylesheet" href="./public/css/submit-data.css">
 </head>
 <body>
-    <div id="data-input" class="container data">asds</div>
-    
+    <div id="data-input" class="container data">
+
+    </div>
+    <script>
+        // let dataInput = document.getElementById('data-input');
+        // dataInput.innerHTML = `<p><strong> Hi ${inputEmail.value}, thank you for visiting my website, i am working on improving everything completely, it is in my
+        //     future plans.</strong></p>`;
+
+        if (localStorage.getItem('email')) {
+            let email = localStorage.getItem('email');
+            // tạo ra một thuộc tính mới để lưu 
+            let greetingMessage = `Hi <span style="color: green;">${email}</span>, thank you for visiting my website, 
+            i am working on improving everything completely, it is in my future plans.`;
+
+            // gắn vào in ra màng hình input
+            document.getElementById('data-input').innerHTML = greetingMessage;
+
+            // Xóa dữ liệu email đã lưu trữ trong `localStorage` để không còn sử dụng sau này
+            localStorage.removeItem('email');
+
+        } else {
+            // Nếu không có dữ liệu email, hiển thị thông báo
+            document.getElementById('data-input').innerText = 'None';
+        }
+    </script>
+
     <script src="./public/js/script.js"></script>
 </body>
 </html>
