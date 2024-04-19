@@ -42,7 +42,7 @@ div .navbar-brand:hover {
 
 .collapse .nav-link:hover {
     color: green;
-    font-size: 15px;
+    transform: scale(1.2);
 }
 
 .dropdown-menu a {
@@ -182,7 +182,6 @@ section .anh-header0{
 
 .section-learned p{
     overflow:auto;
-    
 }
 
 
