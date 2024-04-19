@@ -45,7 +45,7 @@ div .navbar-brand:hover {
 
 .collapse .nav-link:hover {
     color: green;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .dropdown-menu a {
