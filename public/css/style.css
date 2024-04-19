@@ -18,7 +18,7 @@ div .navbar-brand {
 
 div .navbar-brand:hover {
     color: #1441109d;
-    font-size: 30px;
+    transform: scale(1.1);
 }
 
 .navbar {
