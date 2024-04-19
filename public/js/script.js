@@ -46,3 +46,17 @@ submitEmail.addEventListener('click', function (event) {
         return false;
     }
 })
+
+
+// Xử lý phần khi thanh scrolled hoạt động thì màu sẽ chuyển đậm hơn
+document.addEventListener('DOMContentLoaded', function() {
+    // Thêm đoạn mã xử lý sự kiện scroll ở đây
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('#nav-scroll');
+        if (window.scrollY >= 200) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
