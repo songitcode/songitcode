@@ -23,10 +23,8 @@ function checkInputEmail() {
 inputEmail.addEventListener('input', checkInputEmail);
 inputEmail.addEventListener('focusout', checkInputEmail);
 
-
 // xử lý submit
 let submitEmail = document.getElementById('submit-btn');
-
 
 submitEmail.addEventListener('click', function (event) {
     event.preventDefault(); // Ngăn chặn hành vi mặc định của nút submit
@@ -47,16 +45,16 @@ submitEmail.addEventListener('click', function (event) {
     }
 })
 
-
 // Xử lý phần khi thanh scrolled hoạt động thì màu sẽ chuyển đậm hơn
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Thêm đoạn mã xử lý sự kiện scroll ở đây
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const navbar = document.querySelector('#nav-scroll');
-        if (window.scrollY >= 200) {
+        if (window.scrollY >= 20) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
     });
 });
+
