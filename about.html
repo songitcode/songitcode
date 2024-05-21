@@ -33,12 +33,11 @@
 </head>
 
 <body>
-    <!-- my code -->
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg d-flex" id="nav-scroll"> <!-- sroll fixed fixed-top -->
         <div class="container">
             <a class="navbar-brand" href="./index.html"> <img src="./imgs/S-logo-removebg.png" alt="sondev"
-                    width="60px">
+                    class="logo-sondev" width="60px">
             </a> <!---SonLaiNgoiCode--->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
                 aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,65 +52,79 @@
                         <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" style="opacity: .5;">Developer</a>
+                        <a class="nav-link" style="margin-right:10px;" href="#">My Webstite Template</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.w3schools.com/cs/index.php" target="_blank">Learning
-                            <img src="./imgs/c-sharp.png" width="21px" alt=""></a>
-                    </li>
-                    <li><a href="https://www.w3schools.com/html/default.asp" class="nav-link" target="_blank">Learning
+                    <!-- <li><a href="https://www.w3schools.com/html/default.asp" class="nav-link" target="_blank">Learning
                             HTML5 <span><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i></span></a></li>
                     <li><a href="https://www.w3schools.com/css/default.asp" class="nav-link" target="_blank">Learning
-                            CSS <span><i class="fa-brands fa-css3-alt fa-xl text-primary"></i></span> </a></li>
-                    <li class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">Web Learning</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.w3schools.com/html/default.asp" class="dropdown-item">HTML5</a>
-                            </li>
-                            <li><a href="https://www.w3schools.com/css/default.asp" class="dropdown-item">CSS</a></li>
-                        </ul>
-                    </li>
+                            CSS <span><i class="fa-brands fa-css3-alt fa-xl text-primary"></i></span> </a></li> -->
+                    <div class="paste-button">
+                        <button class="button">Learned &nbsp; ▼</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.w3schools.com/html/default.asp" class="dropdown-item" target="_blank"
+                                id="top"><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i>HTML5</a>
+                            <a href="https://www.w3schools.com/css/default.asp" class="dropdown-item" target="_blank"
+                                id="middle"><i class="fa-brands fa-css3-alt fa-xl text-primary"></i> CSS</a>
+
+                            <a href="https://www.w3schools.com/css/default.asp" class="dropdown-item" target="_blank"
+                                id="middle"><img src="./imgs/c-sharp.png" width="21px" alt=""> C#</a>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main -->
-    <article>
-        <section>
-            <div class="card container mt-5">
+    <section class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mt-5 pt-5" style="color: #fff;">
+                    <h3>Hey</h3>
+                    <h1>
+                        <div class="terminal-loader">
+                            <div class="text-animation"><abbr title="Full Name : Nguyễn Hoàng Sơn"
+                                    style="text-decoration: none; cursor: pointer;">I'm Son Nguyen</div>
+                        </div>
+                    </h1>
+                    <p style="font-family: 'Righteous', cursive;">IT learning in Thu Duc college technology,<a
+                            href="https://en.wikipedia.org/wiki/Vietnam" style="text-decoration: none;" target="_blank">
+                            <b style="color:green;">Viet Nam.</b></a>
+                        I have studied and acquired knowledge of all aspects to develop this website.</p><br>
+                    <hr class="text-light">
+                    <div class="mt-5">
+                        <span class="icon-links">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
+                                style="color: #fff;" class="fa-square-color"><i
+                                    class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i></a>
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color"><i
+                                    class="fa-brands fa-square-instagram fa-2xl me-4 "></i></a>
+                            <!-- linked -->
+                            <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
+                                class="fa-square-color"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
 
-                <div class="card-body p-5">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h1>About</h1>
-                            <img src="./imgs/anh1.png" alt="anh-about" style="width: 100%;">
-                        </div>
-                        <div class="col-md-9">
-                            <h1>Introduce</h1>
-                            <br>
-                            <p style="font-family:Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Molestiae cum beatae aperiam
-                                eligendi non reiciendis ea ipsa saepe quos libero consequatur aliquam, dolorem sint
-                                ratione animi explicabo repellendus temporibus error blanditiis, quod molestias
-                                corrupti! Molestiae tenetur quasi, voluptatum, quae recusandae, corporis dolor totam
-                                modi aut nesciunt impedit unde asperiores eligendi!</p>
-                        </div>
+                        </span>
                     </div>
-                </div>
+                    <a href="#" style="text-decoration:none;">
 
-                <div class="d-flex justify-content-center p-5">
-                    <span> <b class="h3">Đang cập nhật</b> </span>
-                    <div class="spinner-border  text-primary ms-3"></div>
+                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-email">
+                            <i class="fa-solid fa-envelope fa-bounce me-2"></i>
+                            EMAIL
+                        </button>
+                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
+                            <i class="fa-solid fa-download fa-bounce me-2"></i>
+                            DOWN LOAD CV
+                        </button>
+                    </a>
                 </div>
-            </div>
-        </section>
-    </article>
+    </section>
+
 
     <!-- Footer -->
     <footer>
-        <div class="container mt-5">
+        <div class="container">
             <h3 class="text-center text-success" style="position: relative; top: 25px;">Thank you! Please leave your
                 Email here.</h3>
             <div class="row text-center mt-5">

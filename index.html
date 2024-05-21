@@ -27,6 +27,7 @@
     <!-- IconLink -->
     <link rel="stylesheet" href="./icon-font/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <title>Son Dev</title>
     <!-- Favicon logo Web -->
     <link rel="icon" type="image/x-icon" href="./imgs/S-logo-removebg.png">
@@ -40,7 +41,7 @@
     <nav class="navbar navbar-expand-lg d-flex" id="nav-scroll"> <!-- sroll fixed fixed-top -->
         <div class="container">
             <a class="navbar-brand" href="./index.html"> <img src="./imgs/S-logo-removebg.png" alt="sondev"
-                    width="60px">
+                    class="logo-sondev" width="60px">
             </a> <!---SonLaiNgoiCode--->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
                 aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,87 +56,97 @@
                         <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" style="opacity: .5;">Developer</a>
+                        <a class="nav-link" style="margin-right:10px;" href="#">My Webstite Template</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.w3schools.com/cs/index.php" target="_blank">Learning
-                            <img src="./imgs/c-sharp.png" width="21px" alt=""></a>
-                    </li>
-                    <li><a href="https://www.w3schools.com/html/default.asp" class="nav-link" target="_blank">Learning
+                    <!-- <li><a href="https://www.w3schools.com/html/default.asp" class="nav-link" target="_blank">Learning
                             HTML5 <span><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i></span></a></li>
                     <li><a href="https://www.w3schools.com/css/default.asp" class="nav-link" target="_blank">Learning
-                            CSS <span><i class="fa-brands fa-css3-alt fa-xl text-primary"></i></span> </a></li>
-                    <li class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">Web Learning</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.w3schools.com/html/default.asp" class="dropdown-item">HTML5</a>
-                            </li>
-                            <li><a href="https://www.w3schools.com/css/default.asp" class="dropdown-item">CSS</a></li>
-                        </ul>
-                    </li>
+                            CSS <span><i class="fa-brands fa-css3-alt fa-xl text-primary"></i></span> </a></li> -->
+                    <div class="paste-button">
+                        <button class="button">Learned &nbsp; ▼</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.w3schools.com/html/default.asp" class="dropdown-item" target="_blank"
+                                id="top"><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i>HTML5</a>
+                            <a href="https://www.w3schools.com/css/default.asp" class="dropdown-item" target="_blank"
+                                id="middle"><i class="fa-brands fa-css3-alt fa-xl text-primary"></i> CSS</a>
+
+                            <a href="https://www.w3schools.com/css/default.asp" class="dropdown-item" target="_blank"
+                                id="middle"><img src="./imgs/c-sharp.png" width="21px" alt=""> C#</a>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Thêm đoạn mã xử lý sự kiện scroll ở đây
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('#nav-scroll');
+                if (window.scrollY >= 20) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+
+    </script>
     <!-- Main -->
-    <article>
-        <section class="header" style="background-color: #87a3ac3d ;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 mt-5 pt-5">
-                        <h3>Hey</h3>
-                        <h1>I'm <b style="color:green;  font-family: 'Righteous', cursive;"><abbr
-                                    title="Full Name : Nguyễn Hoàng Sơn"
-                                    style="text-decoration: none; cursor: pointer;">Son Nguyen.</abbr></b> <br>
-                            an Web Developer.
-                        </h1>
-                        <p style="font-family: 'Righteous', cursive;">IT learning in Thu Duc college technology,<a
-                                href="https://en.wikipedia.org/wiki/Vietnam" style="text-decoration: none;"
-                                target="_blank"> <b style="color:green;">Viet Nam.</b></a>
-                            I have studied and acquired knowledge of all aspects to develop this website.</p><br>
-                        <hr class="text-success">
-                        <p class="mt-5" style=" font-family: 'Righteous', cursive;">
-                            Follow Me
-                            <span class="icon-links">
-                                <!-- Facebook -->
-                                <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
-                                    class="fa-square-color"><i
-                                        class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i></a>
-                                <!-- Instagram -->
-                                <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color"><i
-                                        class="fa-brands fa-square-instagram fa-2xl me-4 "></i></a>
-                                <!-- linked -->
-                                <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
-                                    class="fa-square-color"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
+    <section class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mt-5 pt-5" style="color: #fff;">
+                    <h3>Hey</h3>
+                    <h1>
+                        <div class="terminal-loader">
+                            <div class="text-animation"><abbr title="Full Name : Nguyễn Hoàng Sơn"
+                                    style="text-decoration: none; cursor: pointer;">I'm Son Nguyen</div>
+                        </div>
+                    </h1>
+                    <p style="font-family: 'Righteous', cursive;">IT learning in Thu Duc college technology,<a
+                            href="https://en.wikipedia.org/wiki/Vietnam" style="text-decoration: none;" target="_blank">
+                            <b style="color:green;">Viet Nam.</b></a>
+                        I have studied and acquired knowledge of all aspects to develop this website.</p><br>
+                    <hr class="text-light">
+                    <div class="mt-5">
+                        <span class="icon-links">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
+                                style="color: #fff;" class="fa-square-color"><i
+                                    class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i></a>
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color"><i
+                                    class="fa-brands fa-square-instagram fa-2xl me-4 "></i></a>
+                            <!-- linked -->
+                            <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
+                                class="fa-square-color"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
 
-                            </span>
-                        </p>
-                        <a href="#" style="text-decoration:none;">
-                            <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-email">
-                                <i class="fa-solid fa-envelope fa-bounce me-2"></i>
-                                EMAIL
-                            </button>
-                            <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
-                                <i class="fa-solid fa-download fa-bounce me-2"></i>
-                                DOWN LOAD CV
-                            </button>
-                        </a>
+                        </span>
                     </div>
+                    <a href="#" style="text-decoration:none;">
 
-                    <div class="col-lg-7">
-                        <img src="./imgs/header-anh-removebg-preview.png" class="anh-header0 ms-3 ps-5" width="100%"
-                            alt="header-anh-removebg-preview">
-                    </div>
+                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-email">
+                            <i class="fa-solid fa-envelope fa-bounce me-2"></i>
+                            EMAIL
+                        </button>
+                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
+                            <i class="fa-solid fa-download fa-bounce me-2"></i>
+                            DOWN LOAD CV
+                        </button>
+                    </a>
+                </div>
+
+                <div class="col-lg-7">
+                    <img src="./imgs/header-anh-removebg-preview.png" class="anh-header0 mt-5" width="80%"
+                        alt="header-anh-removebg-preview">
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!--  -->
-
-        <section>
-            <div class="container d-flex justify-content-center mt-5">
-                <div class="card" style="width: 80%;">
+        <section class="container middle">
+            <div class="d-flex justify-content-center mt-5 box">
+                <div class="card m-5 middle-card" style="width: 80%;">
                     <div class="row p-5">
                         <div class="col-md-4">
                             <img src="./imgs/anh-card.png" width="65%" alt="anh-sidebar" class="anh-sidebar1">
@@ -162,153 +173,223 @@
                                 JavaScript, PHP.
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
-    </article>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const card = document.querySelector('.middle-card');
 
-    <!--  -->
-    <!-- Learning Start -->
-    <div class="line-learned mt-5 text-center "><!--  d-flex justify-content-center -->
-        <div class="line"></div>
-        <h1 class="title">LEARNED</h1>
-        <div class="line"></div>
-    </div>
+                card.addEventListener('mousemove', function (event) {
+                    const cardWidth = card.offsetWidth;
+                    const cardRect = card.getBoundingClientRect();
+                    const mouseX = event.clientX - cardRect.left;
 
-    <section class="section-learned container mt-5">
-        <!-- HTML, CSS, JavaScript -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h1 class="text-success"> <i class="fa-brands fa-html5 text-warning me-2"></i>HTML</h1>
-                    <p style="font-family: 'Times New Roman', Times, serif;">HTML là viết tắt của cụm từ Hypertext
-                        Markup Language (tạm dịch là Ngôn ngữ đánh dấu siêu văn
-                        bản). HTML được sử dụng để tạo và cấu trúc các thành phần trong trang web hoặc ứng dụng, phân
-                        chia các đoạn văn, heading, titles, blockquotes… và HTML không phải là ngôn ngữ lập trình.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h1 class="text-success"> <i class="fa-brands fa-css3-alt fa-xl text-primary me-3"></i>CSS</h1>
-                    <p style="font-family: 'Times New Roman', Times, serif;">CSS là chữ viết tắt của Cascading Style
-                        Sheets, nó là một ngôn ngữ được sử dụng để tìm và định
-                        dạng lại các phần tử được tạo ra bởi các ngôn ngữ đánh dấu (HTML). Nói ngắn gọn hơn là ngôn ngữ
-                        tạo phong cách cho trang web.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h1 class="javascript text-success"><i
-                            class="fa-brands fa-square-js me-3 text-warning"></i>JavaScritp</h1>
-                    <p style="font-family: 'Times New Roman', Times, serif;">JavaScript là ngôn ngữ lập trình được nhà
-                        phát triển sử dụng để tạo trang web tương tác. Từ làm
-                        mới bảng tin trên trang mạng xã hội đến hiển thị hình ảnh động và bản đồ tương tác, các chức
-                        năng của JavaScript có thể cải thiện trải nghiệm người dùng của trang web. Là ngôn ngữ kịch bản
-                        phía máy khách, JavaScript là một trong những công nghệ cốt lõi của World Wide Web. Ví dụ: khi
-                        duyệt internet, bất cứ khi nào bạn thấy quảng cáo quay vòng dạng hình ảnh, menu thả xuống nhấp
-                        để hiển thị hoặc màu sắc phần tử thay đổi động trên trang web cũng chính là lúc bạn thấy các
-                        hiệu ứng của JavaScript.</p>
-                </div>
-            </div>
+                    if (mouseX < cardWidth / 2) {
+                        card.style.transform = 'rotateY(-15deg)';
+                    } else {
+                        card.style.transform = 'rotateY(15deg)';
+                    }
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    card.style.transform = 'rotateY(0deg)';
+                });
+            });
+
+        </script>
+
+        <!-- Learning Start -->
+        <div class="line-learned mt-5 text-center "><!--  d-flex justify-content-center -->
+            <div class="line"></div>
+            <h1 class="title">LEARNED</h1>
+            <div class="line"></div>
         </div>
-        <!-- C#, Java, Boostrap -->
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h1 class="text-success"> <img src="./imgs/c-sharp.png" alt="c-sharp" width="50px"> C-Sharp</h1>
-                    <p style="font-family: 'Times New Roman', Times, serif;">C# (hay C sharp) là một ngôn ngữ lập trình
-                        đơn giản, được phát triển bởi đội ngũ kỹ sư của
-                        Microsoft vào năm 2000. C# là ngôn ngữ lập trình hiện đại, hướng đối tượng và được xây dựng trên
-                        nền tảng của hai ngôn ngữ mạnh nhất là C++ và Java.
 
-                        Trong các ứng dụng Windows truyền thống, mã nguồn chương trình được biên dịch trực tiếp thành mã
-                        thực thi của hệ điều hành.
-                        Trong các ứng dụng sử dụng .NET Framework, mã nguồn chương trình (C#, VB.NET) được biên dịch
-                        thành mã ngôn ngữ trung gian MSIL (Microsoft intermediate language).</p>
+        <section class="section-learned container mt-5 pb-5">
+            <!-- HTML, CSS, JavaScript -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h1 class="text-success"> <i class="fa-brands fa-html5 text-warning me-2"></i>HTML</h1>
+                        <p style="font-family: 'Times New Roman', Times, serif;">HTML là viết tắt của cụm từ Hypertext
+                            Markup Language (tạm dịch là Ngôn ngữ đánh dấu siêu văn
+                            bản). HTML được sử dụng để tạo và cấu trúc các thành phần trong trang web hoặc ứng dụng,
+                            phân
+                            chia các đoạn văn, heading, titles, blockquotes… và HTML không phải là ngôn ngữ lập trình.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h1 class="text-success"> <i class="fa-brands fa-css3-alt fa-xl text-primary me-3"></i>CSS</h1>
+                        <p style="font-family: 'Times New Roman', Times, serif;">CSS là chữ viết tắt của Cascading Style
+                            Sheets, nó là một ngôn ngữ được sử dụng để tìm và định
+                            dạng lại các phần tử được tạo ra bởi các ngôn ngữ đánh dấu (HTML). Nói ngắn gọn hơn là ngôn
+                            ngữ
+                            tạo phong cách cho trang web.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h1 class="javascript text-success"><i
+                                class="fa-brands fa-square-js me-3 text-warning"></i>JavaScritp</h1>
+                        <p style="font-family: 'Times New Roman', Times, serif;">JavaScript là ngôn ngữ lập trình được
+                            nhà
+                            phát triển sử dụng để tạo trang web tương tác. Từ làm
+                            mới bảng tin trên trang mạng xã hội đến hiển thị hình ảnh động và bản đồ tương tác, các chức
+                            năng của JavaScript có thể cải thiện trải nghiệm người dùng của trang web. Là ngôn ngữ kịch
+                            bản
+                            phía máy khách, JavaScript là một trong những công nghệ cốt lõi của World Wide Web. Ví dụ:
+                            khi
+                            duyệt internet, bất cứ khi nào bạn thấy quảng cáo quay vòng dạng hình ảnh, menu thả xuống
+                            nhấp
+                            để hiển thị hoặc màu sắc phần tử thay đổi động trên trang web cũng chính là lúc bạn thấy các
+                            hiệu ứng của JavaScript.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h1 class="text-success"><img src="./imgs/java-icon.png" alt="java" width="50px"
-                            style="vertical-align:bottom;" class="me-3">Java</h1>
-                    <p style="font-family: 'Times New Roman', Times, serif;">Java được tạo ra với tiêu chí “Viết (code)
-                        một lần, thực thi khắp nơi” (Write Once, Run Anywhere
-                        – WORA). Chương trình phần mềm viết bằng Java có thể chạy trên mọi nền tảng (platform) khác nhau
-                        thông qua một môi trường thực thi với điều kiện có môi trường thực thi thích hợp hỗ trợ nền tảng
-                        đó.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h1 class="javascript text-success"><i class="fa-brands fa-bootstrap me-3"
-                            style="color: #8f0bd7c6;"></i></i>Boostrap 5</h1>
-                    <p style="font-family: 'Times New Roman', Times, serif;">Bootstrap là một framework front-end miễn
-                        phí giúp người dùng phát triển web nhanh hơn và dễ dàng
-                        hơn. Bootstrap bao gồm các mẫu thiết kế dựa trên HTML và CSS cho các kiểu chữ, biểu mẫu, nút,
-                        bảng, điều hướng, hình ảnh..., cũng như các plugin JavaScript tùy chọn.</p>
-                </div>
-            </div>
+            <!-- C#, Java, Boostrap -->
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h1 class="text-success"> <img src="./imgs/c-sharp.png" alt="c-sharp" width="50px"> C-Sharp</h1>
+                        <p style="font-family: 'Times New Roman', Times, serif;">C# (hay C sharp) là một ngôn ngữ lập
+                            trình
+                            đơn giản, được phát triển bởi đội ngũ kỹ sư của
+                            Microsoft vào năm 2000. C# là ngôn ngữ lập trình hiện đại, hướng đối tượng và được xây dựng
+                            trên
+                            nền tảng của hai ngôn ngữ mạnh nhất là C++ và Java.
 
-        </div>
+                            Trong các ứng dụng Windows truyền thống, mã nguồn chương trình được biên dịch trực tiếp
+                            thành mã
+                            thực thi của hệ điều hành.
+                            Trong các ứng dụng sử dụng .NET Framework, mã nguồn chương trình (C#, VB.NET) được biên dịch
+                            thành mã ngôn ngữ trung gian MSIL (Microsoft intermediate language).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h1 class="text-success"><img src="./imgs/java-icon.png" alt="java" width="50px"
+                                style="vertical-align:bottom;" class="me-3">Java</h1>
+                        <p style="font-family: 'Times New Roman', Times, serif;">Java được tạo ra với tiêu chí “Viết
+                            (code)
+                            một lần, thực thi khắp nơi” (Write Once, Run Anywhere
+                            – WORA). Chương trình phần mềm viết bằng Java có thể chạy trên mọi nền tảng (platform) khác
+                            nhau
+                            thông qua một môi trường thực thi với điều kiện có môi trường thực thi thích hợp hỗ trợ nền
+                            tảng
+                            đó.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h1 class="javascript text-success"><i class="fa-brands fa-bootstrap me-3"
+                                style="color: #8f0bd7c6;"></i></i>Boostrap 5</h1>
+                        <p style="font-family: 'Times New Roman', Times, serif;">Bootstrap là một framework front-end
+                            miễn
+                            phí giúp người dùng phát triển web nhanh hơn và dễ dàng
+                            hơn. Bootstrap bao gồm các mẫu thiết kế dựa trên HTML và CSS cho các kiểu chữ, biểu mẫu,
+                            nút,
+                            bảng, điều hướng, hình ảnh..., cũng như các plugin JavaScript tùy chọn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
-    <div class="text text-center mt-5">
-        <span> <b class="h3">Đang phát triển</b> </span>
-        <div class="spinner-border  text-primary ms-3"></div>
-    </div>
 
-    <!-- Footer -->
     <footer>
-        <div class="container mt-5">
-            <h3 class="text-center text-success" style="position: relative; top: 25px;">Thank you! Please leave your
-                Email here.</h3>
+        <div class="container">
+            <h3 class="text-center text-success" style="position: relative; top: 25px;">
+                Thank you! Please leave your Email here.
+            </h3>
             <div class="row text-center mt-5">
                 <div class="col-lg-12 d-flex justify-content-center">
-                    <input type="email" id="email" class="form-control" placeholder="Email" style="width: 40%;">
-
+                    <!-- <input type="email" id="email" class="form-control input-email" placeholder="Email"
+                        style="width: 40%;">
                     <span>
-                        <button type="submit" class="btn btn-success" style="height: 57.5px; width: 150px;"
+                        <button type="button" class="btn btn-success" style="height: 57.5px; width: 150px;"
                             id="submit-btn">SUBMIT</button>
-                    </span>
+                    </span> -->
+                    <form id="contact-form" class="box-form">
+                        <div class="wrapper-form">
+                            <label for="first">First Name:<input class="input-footer" id="first" name="first"
+                                    type="text" placeholder="First Name"></label>
+                            <label for="last">Last Name:<input class="input-footer" id="last" name="last" type="text"
+                                    placeholder="Last Name"></label>
+                            <label for="emails">Email:<input class="input-footer" id="emails" name="emails" type="email"
+                                    placeholder="Email"></label>
+                            <label for="phone">Phone Number:<input class="input-footer" id="phone" name="phone"
+                                    type="text" placeholder="Phone Number"></label>
+                            <label class="textarea" for="message">Message:<textarea class="input-footer" name="message"
+                                    id="message" style="width:100%; height:100%;"
+                                    placeholder="Your Message"></textarea></label>
+                        </div>
+                        <button class="btn-submit" id="submit" type="submit">Submit</button>
+                    </form>
                 </div>
-                <div class="text-cebter">
-                    <div class="invalid-feedback">Loi Email <br> VD: example@gmail.com</div>
-                    <div class="valid-feedback">Hop Le</div>
+                <div class="text-center">
+                    <div class="invalid-feedback" id="invalid-feedback">Invalid Email <br> Example: example@gmail.com
+                    </div>
+                    <div class="valid-feedback" id="valid-feedback">Valid Email</div>
                 </div>
             </div>
             <hr>
             <div class="row d-flex">
-                <div class="col-md-5  mt-5 mb-5 ">
+                <div class="col-md-5 mt-5 mb-5">
                     <h1>Contact</h1>
                     <hr style="width: 30%;">
-                    <i class="fa-solid fa-phone me-2"></i> <span>+84 8541 12509</span><br>
-                    <i class="fa-solid fa-envelope me-2"></i> <span>son71868@gmail.com</span>
-
+                    <i class="fas fa-phone me-2"></i> <span>+84 8541 12509</span><br>
+                    <i class="fas fa-envelope me-2"></i> <span>son71868@gmail.com</span><br>
+                    <i class="fab fa-linkedin me-2"></i> <span><a class="link-ft" target="_blank"
+                            href="https://www.linkedin.com/in/nguyen-son-74bb2a304/">Nguyen Son</a></span>
                 </div>
-                <div class="col-md-5  mt-5 mb-5">
+                <div class="col-md-5 mt-5 mb-5">
                     <h1>Address</h1>
                     <hr style="width: 30%;">
-                    <i class="fa-solid fa-map-location-dot me-2"></i> <span> Khanh Hai, TVT, Ca Mau (Home Town)</span>
-                    <br>
-                    <i class="fa-solid fa-map-location-dot me-2"></i> <span> Di An, Lai Thieu, Binh Duong
-                        (Currently)</span>
-
+                    <i class="fas fa-map-marker-alt me-2"></i> <span> Khanh Hai, TVT, Ca Mau (Home Town)</span><br>
+                    <i class="fas fa-map-marker-alt me-2"></i> <span> Di An, Lai Thieu, Binh Duong (Currently)</span>
                 </div>
-                <div class="col-md-2  mt-5 mb-5">
+                <div class="col-md-2 mt-5 mb-5">
                     <h1>Hobbies</h1>
                     <hr style="width: 30%;">
-                    <p></p>
-                    <i class="fa-solid fa-code"></i><span> Coding</span><br>
-                    <i class="fa-solid fa-bed"></i><span> Sleep</span><br>
+                    <i class="fas fa-code"></i><span> Coding</span><br>
+                    <i class="fas fa-bed"></i><span> Sleep</span><br>
                 </div>
                 <div class="container line-footer"></div>
-                <p class="container d-flex justify-content-center text-aligh-center"
-                    style="font-family: 'Times New Roman', Times, serif;">Website develop by JaySon <span
-                        style="font-size: large; margin: 0 5px;"> &#169; </span> (Nguyen Son) </p>
+                <p class="container d-flex justify-content-center text-align-center"
+                    style="font-family: 'Times New Roman', Times, serif;">
+                    Website developed by Nguyen Son <span style="font-size: large; margin: 0 5px;"> &#169; </span>
+                </p>
             </div>
         </div>
     </footer>
+
+    <!-- <script>
+        // Initialize EmailJS with your user ID
+        emailjs.init("OBLllkCzLJWJrpEc_");
+
+        document.getElementById('submit-btn').addEventListener('click', function () {
+            const userEmail = document.getElementById('email').value;
+            const invalidFeedback = document.getElementById('invalid-feedback');
+            const validFeedback = document.getElementById('valid-feedback');
+
+            // Basic email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            // Send email using EmailJS
+            emailjs.send("service_zpwxj2r", "template_wzoepfo", {
+                user_email: userEmail
+            })
+                .then(function (response) {
+                    alert('Email sent successfully!');
+                }, function (error) {
+                    console.error('Error:', error);
+                    alert('Error sending email.');
+                });
+        });
+    </script> -->
 
     <!-- Link Script -->
     <script src="./public-bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -317,7 +398,37 @@
     <!-- Icon Script -->
     <script src="./icon-font/js/all.min.js"></script>
     <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
-
+    <!-- Include Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("OBLllkCzLJWJrpEc_");
+        })();
+    </script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Generate the parameter object
+            var params = {
+                first: document.getElementById('first').value,
+                last: document.getElementById('last').value,
+                emails: document.getElementById('emails').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+            // Send the email
+            emailjs.send('service_zpwxj2r', 'template_h3o3b72', params)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email successfully sent!');
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email. Please try again later.');
+                });
+        });
+    </script>
 </body>
 
 </html>
