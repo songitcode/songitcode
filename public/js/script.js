@@ -23,36 +23,32 @@ function checkInputEmail() {
 inputEmail.addEventListener('input', checkInputEmail);
 inputEmail.addEventListener('focusout', checkInputEmail);
 
-// xử lý submit
-// let submitEmail = document.getElementById('submit-btn');
+//xử lý submit
+let submitEmail = document.getElementById('submit');
 
-// submitEmail.addEventListener('click', function (event) {
-//     event.preventDefault(); // Ngăn chặn hành vi mặc định của nút submit
+submitEmail.addEventListener('click', function (event) {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của nút submit
 
-//     let email = document.getElementById('email').value;
+    let email = document.getElementById('emails').value;
 
-//     // kiểm tra dữ liệu 
-//     if (checkInputEmail() && email.trim() !== '') {
-//         // lưu email vào localStorage
-//         localStorage.setItem('email', email);
-//         // qua trang submit.html
-//         window.location.href = 'submit.html';
-//         return true;
-//     }
-//     else {
-//         alert("Email đang trống ?");
-//         return false;
-//     }
-// })
+    // kiểm tra dữ liệu 
+    if (checkInputEmail() && email.trim() !== '') {
+        // lưu email vào localStorage
+        localStorage.setItem('email', email);
+        // qua trang submit.html
+        window.location.href = 'submit.html';
+        return true;
+    }
+    else {
+        alert("Email đang trống ?");
+        return false;
+    }
+})
 
 // Xử lý phần khi thanh scrolled hoạt động thì màu sẽ chuyển đậm hơn
 
 
 // btn-email
-const btn_Email = document.querySelector('.btn-email');
-btn_Email.addEventListener('click', function () {
-    window.location.href = "mailto:son71868@gmail.com";
-});
 
 //
 // Email footer
