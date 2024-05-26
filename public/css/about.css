@@ -1,0 +1,47 @@
+.chua-anh {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+  perspective: 1000px; /* Needed for 3D effect */
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+}
+
+.image-container::before,
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("./imgs/header-anh-removebg-preview.png");
+  background-size: 200% 100%;
+  transition: transform 0.5s;
+}
+
+.image-container::before {
+  left: 0;
+  background-position: left;
+  transform-origin: right;
+}
+
+.image-container::after {
+  right: 0;
+  background-position: right;
+  transform-origin: left;
+}
+
+.image-container:hover::before {
+  transform: rotateY(-45deg);
+}
+
+.image-container:hover::after {
+  transform: rotateY(45deg);
+}

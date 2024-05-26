@@ -13,6 +13,7 @@
 
     <!-- Link css1 -->
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/animation_loading.css">
 
     <!-- Link google font -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,7 +64,7 @@
                         <a class="nav-link active text-success" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link" href="./about.html">About Myself</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-right:10px;" href="#">My Webstite Template</a>
@@ -92,59 +93,76 @@
     <section class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 mt-5 pt-5" style="color: #fff;">
+                <div class="col-lg-5 mt-5 pt-5 animation-1">
                     <h3>Hey</h3>
                     <h1>
                         <div class="terminal-loader">
-                            <div class="text-animation"><abbr title="Full Name : Nguyễn Hoàng Sơn"
-                                    style="text-decoration: none; cursor: pointer;">I'm Son Nguyen</div>
+                            <div class="text-animation">
+                                <abbr title="Full Name : Nguyễn Hoàng Sơn"
+                                    style="text-decoration: none; cursor: pointer;">
+                                    I'm Son Nguyen
+                                </abbr>
+                            </div>
                         </div>
                     </h1>
-                    <p style="font-family: 'Righteous', cursive;">IT learning in Thu Duc college technology,<a
-                            href="https://en.wikipedia.org/wiki/Vietnam" style="text-decoration: none;" target="_blank">
-                            <b style="color:green;">Viet Nam.</b></a>
-                        I have studied and acquired knowledge of all aspects to develop this website.</p><br>
+                    <p style="font-family: 'Righteous', cursive;">
+                        IT learning in Thu Duc college technology,
+                        <a href="https://en.wikipedia.org/wiki/Vietnam" style="text-decoration: none;" target="_blank">
+                            <b style="color:green;">Viet Nam.</b>
+                        </a>
+                        I have studied and acquired knowledge of all aspects to develop this website.
+                    </p>
+                    <br>
                     <hr class="text-light">
                     <div class="mt-5">
                         <span class="icon-links">
                             <!-- Facebook -->
                             <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
-                                style="color: #fff;" class="fa-square-color"><i
-                                    class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i></a>
+                                class="fa-square-color">
+                                <i class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i>
+                            </a>
                             <!-- Instagram -->
-                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color"><i
-                                    class="fa-brands fa-square-instagram fa-2xl me-4 "></i></a>
-                            <!-- linked -->
+                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color">
+                                <i class="fa-brands fa-square-instagram fa-2xl me-4"></i>
+                            </a>
+                            <!-- LinkedIn -->
                             <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
-                                class="fa-square-color"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
-
+                                class="fa-square-color">
+                                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
                         </span>
                     </div>
                     <a href="#" style="text-decoration:none;">
-                        <script>
-                            const btn_Email = document.querySelector('.btn-email');
-                            btn_Email.addEventListener('click', function () {
-                                window.location.href = "mailto:son71868@gmail.com";
-                            });
-                        </script>
                         <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-email">
                             <i class="fa-solid fa-envelope fa-bounce me-2"></i>
                             EMAIL
                         </button>
                         <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
                             <i class="fa-solid fa-download fa-bounce me-2"></i>
-                            DOWN LOAD CV
+                            DOWNLOAD CV
                         </button>
                     </a>
                 </div>
 
-                <div class="col-lg-7">
+                <div class="col-lg-7 chua-anh">
                     <img src="./imgs/header-anh-removebg-preview.png" class="anh-header0 mt-5" width="80%"
                         alt="header-anh-removebg-preview">
                 </div>
             </div>
         </div>
 
+        <script>
+            window.addEventListener('load', () => {
+                document.querySelector('.container').style.opacity = '1';
+                document.querySelector('.col-lg-5').classList.add('animate-left');
+                document.querySelector('.col-lg-7').classList.add('animate-right');
+            });
+
+            const btn_Email = document.querySelector('.btn-email');
+            btn_Email.addEventListener('click', function () {
+                window.location.href = "mailto:son71868@gmail.com";
+            });
+        </script>
         <section class="container middle">
             <div class="d-flex justify-content-center mt-5 box">
                 <div class="card m-5 middle-card" style="width: 80%;">
@@ -181,24 +199,43 @@
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const card = document.querySelector('.middle-card');
+                const card_bottom = document.querySelector('.bottom-card');
+                //    card.addEventListener('mousemove', function (event) {
+                //        const cardWidth = card.offsetWidth;
+                //        const cardRect = card.getBoundingClientRect();
+                //        const mouseX = event.clientX - cardRect.left;
+                //
+                //        if (mouseX < cardWidth / 2) {
+                //            card.style.transform = 'rotateY(-15deg)';
+                //        } else {
+                //            card.style.transform = 'rotateY(15deg)';
+                //        }
+                //    });
+                //
+                //    card.addEventListener('mouseleave', function () {
+                //        card.style.transform = 'rotateY(0deg)';
+                //    });
 
-                card.addEventListener('mousemove', function (event) {
-                    const cardWidth = card.offsetWidth;
-                    const cardRect = card.getBoundingClientRect();
-                    const mouseX = event.clientX - cardRect.left;
+                function isInViewport(element) {
+                    const rect = element.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
 
-                    if (mouseX < cardWidth / 2) {
-                        card.style.transform = 'rotateY(-15deg)';
-                    } else {
-                        card.style.transform = 'rotateY(15deg)';
+                function onScroll() {
+                    if (isInViewport(card)) {
+                        card.classList.add('visible');
+                        window.removeEventListener('scroll', onScroll);
                     }
-                });
+                }
 
-                card.addEventListener('mouseleave', function () {
-                    card.style.transform = 'rotateY(0deg)';
-                });
+                window.addEventListener('scroll', onScroll);
+                onScroll();
             });
-
         </script>
 
         <!-- Learning Start -->
@@ -211,7 +248,7 @@
         <section class="section-learned container mt-5 pb-5">
             <!-- HTML, CSS, JavaScript -->
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 bottom-card">
                     <div class="card p-4">
                         <h1 class="text-success"> <i class="fa-brands fa-html5 text-warning me-2"></i>HTML</h1>
                         <p style="font-family: 'Times New Roman', Times, serif;">HTML là viết tắt của cụm từ Hypertext
@@ -222,7 +259,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 bottom-card">
                     <div class="card p-4">
                         <h1 class="text-success"> <i class="fa-brands fa-css3-alt fa-xl text-primary me-3"></i>CSS</h1>
                         <p style="font-family: 'Times New Roman', Times, serif;">CSS là chữ viết tắt của Cascading Style
@@ -232,7 +269,7 @@
                             tạo phong cách cho trang web.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 bottom-card">
                     <div class="card p-4">
                         <h1 class="javascript text-success"><i
                                 class="fa-brands fa-square-js me-3 text-warning"></i>JavaScritp</h1>
@@ -253,7 +290,7 @@
             </div>
             <!-- C#, Java, Boostrap -->
             <div class="row mt-4">
-                <div class="col-md-4">
+                <div class="col-md-4 bottom-card">
                     <div class="card p-4">
                         <h1 class="text-success"> <img src="./imgs/c-sharp.png" alt="c-sharp" width="50px"> C-Sharp</h1>
                         <p style="font-family: 'Times New Roman', Times, serif;">C# (hay C sharp) là một ngôn ngữ lập
@@ -270,7 +307,7 @@
                             thành mã ngôn ngữ trung gian MSIL (Microsoft intermediate language).</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 bottom-card">
                     <div class="card p-4">
                         <h1 class="text-success"><img src="./imgs/java-icon.png" alt="java" width="50px"
                                 style="vertical-align:bottom;" class="me-3">Java</h1>
@@ -284,7 +321,7 @@
                             đó.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 bottom-card">
                     <div class="card p-4">
                         <h1 class="javascript text-success"><i class="fa-brands fa-bootstrap me-3"
                                 style="color: #8f0bd7c6;"></i></i>Boostrap 5</h1>
@@ -313,44 +350,6 @@
                         <button type="button" class="btn btn-success" style="height: 57.5px; width: 150px;"
                             id="submit-btn">SUBMIT</button>
                     </span> -->
-                    <script>
-                        (function () {
-                            emailjs.init("OBLllkCzLJWJrpEc_");
-                        })();
-
-                        document.getElementById('contact-form').addEventListener('submit', function (event) {
-                            event.preventDefault();
-
-                            // Lấy giá trị email từ input
-                            var email = document.getElementById('emails').value;
-
-                            // Kiểm tra định dạng email bằng biểu thức chính quy
-                            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                            if (!emailPattern.test(email)) {
-                                alert('Vui lòng nhập địa chỉ email hợp lệ.');
-                                return; // Dừng việc gửi email nếu địa chỉ email không hợp lệ
-                            }
-
-                            // Nếu địa chỉ email hợp lệ, tiếp tục gửi email
-                            var params = {
-                                first: document.getElementById('first').value,
-                                last: document.getElementById('last').value,
-                                emails: email,
-                                phone: document.getElementById('phone').value,
-                                message: document.getElementById('message').value
-                            };
-
-                            emailjs.send('service_zpwxj2r', 'template_h3o3b72', params)
-                                .then(function (response) {
-                                    console.log('SUCCESS!', response.status, response.text);
-                                    alert('Email đã được gửi thành công!');
-                                }, function (error) {
-                                    console.log('THẤT BẠI...', error);
-                                    alert('Không thể gửi email. Vui lòng thử lại sau.');
-                                });
-                        });
-
-                    </script>
                     <form id="contact-form" class="box-form">
                         <div class="wrapper-form">
                             <label for="first">First Name <span class="red-text">*</span><input class="input-footer"
@@ -421,9 +420,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
     </script>
-    <!-- <script src="/public/js/email.js"></script>
-    <script src="/public/js/scrolled.js"></script>
-    <script src="/public/js/email_to.js"></script> -->
+    <script src="/public/js/email.js"></script>
 </body>
 
 </html>

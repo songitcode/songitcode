@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
 div .navbar-brand {
   font-family: "Righteous", cursive;
   transition: 0.8s;
@@ -331,6 +338,14 @@ section .anh-header0 {
   display: block;
 }
 
+.chua-anh {
+  transform-style: preserve-3d;
+  transition: transform 0.8s, filter 1s;
+}
+.chua-anh:hover {
+  transform: rotateY(0deg);
+}
+
 // Them hieu ung cho box
 .container {
   perspective: 1000px;
@@ -419,4 +434,25 @@ section .anh-header0 {
 
 .red-text {
   color: red;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.middle-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.middle-card.visible {
+  animation: slideUp 0.5s forwards;
 }

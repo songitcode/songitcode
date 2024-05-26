@@ -13,6 +13,7 @@
 
     <!-- Link css1 -->
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/about.css">
 
     <!-- Link google font -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +34,19 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Thêm đoạn mã xử lý sự kiện scroll ở đây
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('#nav-scroll');
+                if (window.scrollY >= 20) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg d-flex" id="nav-scroll"> <!-- sroll fixed fixed-top -->
         <div class="container">
@@ -49,7 +63,7 @@
                         <a class="nav-link active text-success" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link" href="./about.html">About Myself</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="margin-right:10px;" href="#">My Webstite Template</a>
@@ -74,102 +88,129 @@
             </div>
         </div>
     </nav>
-
     <!-- Main -->
     <section class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 mt-5 pt-5" style="color: #fff;">
-                    <h3>Hey</h3>
-                    <h1>
-                        <div class="terminal-loader">
-                            <div class="text-animation"><abbr title="Full Name : Nguyễn Hoàng Sơn"
-                                    style="text-decoration: none; cursor: pointer;">I'm Son Nguyen</div>
+        <section class="about-myself pt-5 pb-5 container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <style>
+                                .img-about1 {
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    width: 20rem;
+                                    height: auto;
+                                    margin-top: -5rem;
+                                    border-radius: 50%;
+                                    transition: .5s;
+                                }
+
+                                .img-about1:hover {
+                                    scale: 1.5;
+                                }
+
+                                @media only screen and (max-width: 980px) {
+                                    .img-about1 {
+                                        display: none;
+                                    }
+                                }
+                            </style>
+                            <img class="img-about1" src="/imgs/anh-about1.png" alt="">
                         </div>
-                    </h1>
-                    <p style="font-family: 'Righteous', cursive;">IT learning in Thu Duc college technology,<a
-                            href="https://en.wikipedia.org/wiki/Vietnam" style="text-decoration: none;" target="_blank">
-                            <b style="color:green;">Viet Nam.</b></a>
-                        I have studied and acquired knowledge of all aspects to develop this website.</p><br>
-                    <hr class="text-light">
-                    <div class="mt-5">
-                        <span class="icon-links">
-                            <!-- Facebook -->
-                            <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
-                                style="color: #fff;" class="fa-square-color"><i
-                                    class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i></a>
-                            <!-- Instagram -->
-                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color"><i
-                                    class="fa-brands fa-square-instagram fa-2xl me-4 "></i></a>
-                            <!-- linked -->
-                            <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
-                                class="fa-square-color"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
-
-                        </span>
+                        <div class="col-lg-8">
+                            <p class="p-5">
+                                Welcome to my website! I am Nguyen Hoang Son, a person who is passionate
+                                about singing
+                                and
+                                programming. I spent my time studying at Thu Duc High School of Technology, full of
+                                hardships from
+                                2022 to It's been 2 years since 2024. This blog is where I share my stories, experiences
+                                and
+                                programming tips. I hope that through my tips, you will find inspiration to explore
+                                programming
+                                progress and try harder for the future. Please join me in starting this journey!
+                            </p>
+                            <style>
+                                .link-social {
+                                    margin-left: 3rem;
+                                }
+                            </style>
+                            <div class="link-social">
+                                <h4>Social</h4>
+                                <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
+                                    style="color: #fff;" class="fa-square-color"><i
+                                        class="fa-brands fa-square-facebook fa-2xl me-4"></i></a>
+                                <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color"><i
+                                        class="fa-brands fa-square-instagram fa-2xl me-4 "></i></a>
+                                <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
+                                    class="fa-square-color"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" style="text-decoration:none;">
-
-                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-email">
-                            <i class="fa-solid fa-envelope fa-bounce me-2"></i>
-                            EMAIL
-                        </button>
-                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
-                            <i class="fa-solid fa-download fa-bounce me-2"></i>
-                            DOWN LOAD CV
-                        </button>
-                    </a>
                 </div>
+            </div>
+        </section>
     </section>
 
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <h3 class="text-center text-success" style="position: relative; top: 25px;">Thank you! Please leave your
-                Email here.</h3>
+            <h3 class="text-center text-success" style="position: relative; top: 25px;">
+                Thank you! Please leave your Email here.
+            </h3>
             <div class="row text-center mt-5">
                 <div class="col-lg-12 d-flex justify-content-center">
-                    <input type="email" id="email" class="form-control" placeholder="Email" style="width: 40%;">
-
-                    <span>
-                        <button type="submit" class="btn btn-success" style="height: 57.5px; width: 150px;"
-                            id="submit-btn">SUBMIT</button>
-                    </span>
+                    <form id="contact-form" class="box-form">
+                        <div class="wrapper-form">
+                            <label for="first">First Name <span class="red-text">*</span><input class="input-footer"
+                                    id="first" name="first" type="text" placeholder="First Name" required></label>
+                            <label for="last">Last Name <span class="red-text">*</span><input class="input-footer"
+                                    id="last" name="last" type="text" placeholder="Last Name" required></label>
+                            <label for="emails">Email <span class="red-text">*</span>
+                                <input type="email" id="emails" class="input-footer" placeholder="Email" required>
+                            </label>
+                            <label for="phone">Phone Number <span class="red-text">*</span><input class="input-footer"
+                                    id="phone" name="phone" type="text" placeholder="Phone Number" required></label>
+                            <label class="textarea" for="message">Message <span class="red-text">*</span><textarea
+                                    class="input-footer" name="message" id="message" style="width:100%; height:100%;"
+                                    placeholder="Your Message" required></textarea></label>
+                        </div>
+                        <button class="btn-submit" id="submit" type="submit">Submit</button>
+                    </form>
                 </div>
-                <div class="text-cebter">
-                    <div class="invalid-feedback">Loi Email <br> VD: example@gmail.com</div>
-                    <div class="valid-feedback">Hop Le</div>
+                <div class="text-center">
+                    <div class="invalid-feedback" id="invalid-feedback">Invalid Email <br> Example: example@gmail.com
+                    </div>
+                    <div class="valid-feedback" id="valid-feedback">Valid Email</div>
                 </div>
             </div>
             <hr>
             <div class="row d-flex">
-                <div class="col-md-5  mt-5 mb-5 ">
+                <div class="col-md-5 mt-5 mb-5">
                     <h1>Contact</h1>
                     <hr style="width: 30%;">
-                    <i class="fa-solid fa-phone me-2"></i> <span>+84 8541 12509</span><br>
-                    <i class="fa-solid fa-envelope me-2"></i> <span>son71868@gmail.com</span>
-
+                    <i class="fas fa-phone me-2"></i> <span>+84 8541 12509</span><br>
+                    <i class="fas fa-envelope me-2"></i> <span>son71868@gmail.com</span><br>
+                    <i class="fab fa-linkedin me-2"></i> <span><a class="link-ft" target="_blank"
+                            href="https://www.linkedin.com/in/nguyen-son-74bb2a304/">Nguyen Son</a></span>
                 </div>
-                <div class="col-md-5  mt-5 mb-5">
+                <div class="col-md-5 mt-5 mb-5">
                     <h1>Address</h1>
                     <hr style="width: 30%;">
-                    <i class="fa-solid fa-map-location-dot me-2"></i> <span> Khanh Hai, TVT, Ca Mau (Home Town)</span>
-                    <br>
-                    <i class="fa-solid fa-map-location-dot me-2"></i> <span> Di An, Lai Thieu, Binh Duong
-                        (Currently)</span>
-
+                    <i class="fas fa-map-marker-alt me-2"></i> <span> Khanh Hai, TVT, Ca Mau (Home Town)</span><br>
+                    <i class="fas fa-map-marker-alt me-2"></i> <span> Di An, Lai Thieu, Binh Duong (Currently)</span>
                 </div>
-                <div class="col-md-2  mt-5 mb-5">
+                <div class="col-md-2 mt-5 mb-5">
                     <h1>Hobbies</h1>
                     <hr style="width: 30%;">
-                    <p></p>
-                    <i class="fa-solid fa-code"></i><span> Coding</span><br>
-                    <i class="fa-solid fa-bed"></i><span> Sleep</span><br>
+                    <i class="fas fa-code"></i><span> Coding</span><br>
+                    <i class="fas fa-bed"></i><span> Sleep</span><br>
                 </div>
                 <div class="container line-footer"></div>
-                <p class="container d-flex justify-content-center text-aligh-center"
-                    style="font-family: 'Times New Roman', Times, serif;">Website develop by JaySon <span
-                        style="font-size: large; margin: 0 5px;"> &#169; </span> (Nguyen Son) </p>
+                <p class="container d-flex justify-content-center text-align-center"
+                    style="font-family: 'Times New Roman', Times, serif;">
+                    Website developed by Nguyen Son <span style="font-size: large; margin: 0 5px;"> &#169; </span>
+                </p>
             </div>
         </div>
     </footer>
@@ -180,9 +221,7 @@
     <!-- Icon Script -->
     <script src="./icon-font/js/all.min.js"></script>
     <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
-    <script src="/public/js/scrolled.js"></script>
-    <script src="/public/js/email_to.js"></script>
-
+    <script src="/public/js/email.js"></script>
 </body>
 
 </html>
