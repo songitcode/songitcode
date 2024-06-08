@@ -37,23 +37,19 @@ div .navbar-brand:hover {
   /* background: #87a3ac3d; */
   /* background: #000; */
   background: rgb(29, 29, 29);
-  background: linear-gradient(
-    360deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(0, 96, 7, 1) 100%
-  );
+  background: linear-gradient(360deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 35%,
+      rgba(0, 96, 7, 1) 100%);
   /* height: 100rem; */
 }
 
 .bg-body {
   background: rgb(1, 37, 3);
-  background: linear-gradient(
-    180deg,
-    rgba(1, 37, 3, 1) 0%,
-    rgba(0, 0, 0, 1) 15%,
-    rgba(1, 43, 4, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(1, 37, 3, 1) 0%,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(1, 43, 4, 1) 100%);
 }
 
 .scrolled {
@@ -104,6 +100,7 @@ h1 {
   color: rgba(31, 31, 244, 0.66);
   transition: 0.5s;
 }
+
 #facebook:hover {
   color: green;
 }
@@ -186,9 +183,11 @@ section .anh-sidebar1 {
   height: 25rem;
   border-radius: 20%;
 }
+
 section {
   perspective: 1000px;
 }
+
 section .anh-header0 {
   display: block;
   max-width: 100%;
@@ -227,7 +226,8 @@ section .anh-header0 {
   .javascript {
     font-size: 30px;
   }
-  .col-lg-7 > img {
+
+  .col-lg-7>img {
     width: 180%;
   }
 
@@ -245,19 +245,23 @@ section .anh-header0 {
 }
 
 @keyframes typeAndDelete {
+
   0%,
   10% {
     width: 0;
   }
+
   45%,
   55% {
     width: 7.3em;
   }
+
   90%,
   100% {
     width: 0;
   }
 }
+
 .text-animation {
   display: inline-block;
   white-space: nowrap;
@@ -269,7 +273,7 @@ section .anh-header0 {
   backdrop-filter: blur(5px);
 }
 
-// dropdown
+/* // dropdown */
 .paste-button {
   position: relative;
   display: block;
@@ -279,6 +283,7 @@ section .anh-header0 {
 .nav-link {
   color: #fff !important;
 }
+
 .button {
   border: none;
   background: none;
@@ -342,11 +347,12 @@ section .anh-header0 {
   transform-style: preserve-3d;
   transition: transform 0.8s, filter 1s;
 }
+
 .chua-anh:hover {
   transform: rotateY(0deg);
 }
 
-// Them hieu ung cho box
+/* // Them hieu ung cho box */
 .container {
   perspective: 1000px;
 }
@@ -403,33 +409,45 @@ section .anh-header0 {
   text-decoration: underline;
 }
 
+.input-footer:focus {
+  outline: none;
+  border: .3px solid #008e0a;
+  box-shadow: rgba(4, 255, 125, 0.2) 0px 7px 29px 0px;
+}
+
 .input-footer {
+  margin-left: 10px;
   display: flex;
   border-radius: 10px;
-  border: 1px solid #008e0a;
   background: #000;
   padding: 15px;
   color: #fff;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #008e0a;
+  transition: all 2s;
 }
 
 .box-form {
-  border: 1px solid #008e0a;
-  padding: 15px;
+  /* border: 1px solid #008e0a; */
 }
 
 .btn-submit {
-  border: solid #008e0a;
+  border: .5px solid #008e0a;
   margin: 10px;
-  padding: 10px 20px 10px;
+  padding: 5px 20px 5px;
   border-radius: 10px;
   background: #000;
   color: #fff;
   transition: 0.3s;
+  outline: none;
+  box-shadow: rgba(4, 255, 125, 0.2) 0px 10px 29px 0px;
 }
 
 .btn-submit:hover {
-  background: #008e0a;
-  color: #000;
+  background: #00bf0d;
 }
 
 .red-text {
@@ -441,6 +459,7 @@ section .anh-header0 {
     transform: translateY(100px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;

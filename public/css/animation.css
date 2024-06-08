@@ -1,0 +1,410 @@
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: none;
+    border: 1px solid #017003;
+    border-radius: 50%;
+    color: #05ea09;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+
+/* Hieu ung nut send */
+.btn-submit {
+    float: inline-end;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-submit span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-submit svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-submit:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn-submit:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn-submit:hover span {
+    transform: translateX(5em);
+}
+
+.btn-submit:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+/*  animation dowload */
+.download-button {
+    position: relative;
+    background: none;
+    border: 1px solid #017003;
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+    transition: .1s;
+}
+
+.download-button .my-cv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: none;
+    border: solid 1px #e8e8e82d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 0 20px;
+}
+
+.download {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 4px;
+    transform: translateY(0%);
+    background-color: #01e056;
+    border: solid 1px #01e0572d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+    opacity: 0;
+}
+
+.download-button:hover {
+    background: #017003;
+    color: #fff;
+}
+
+.download-button:hover .download {
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+/* Animation fixed */
+.redes {
+    width: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    bottom: .5rem;
+}
+
+.redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.redes a svg {
+    width: 30px;
+    fill: #ffffff;
+}
+
+.redes .discord {
+    background-color: rgb(0, 60, 255);
+}
+
+.redes .github {
+    background-color: rgb(24, 22, 22);
+}
+
+.redes .linkedin {
+    background-color: #33BBFF;
+}
+
+.redes .youtube {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040);
+}
+
+.redes a:hover {
+    width: calc(100% + 10px);
+    transform: translateX(-10px) scale(1.3);
+}
+
+.redes a:hover i {
+    scale: 1.2;
+}
+
+/* Animation btn-email */
+#btn-to-email {
+    --bg-color-sup: #d2d2d2;
+    --bg-color: #f4f4f4;
+    --bg-hover-color: #017003;
+    --online-status: #00da00;
+    --font-size: 13px;
+    --btn-transition: all 0.2s ease-out;
+}
+
+.btn-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 var(--font-size) Helvetica Neue, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 6px 10px 6px 6px;
+    width: fit-content;
+    height: 40px;
+    border: .5px solid #017003;
+    color: #04a007;
+    overflow: hidden;
+    position: relative;
+    transition: var(--btn-transition);
+    background: none;
+}
+
+.btn-email:hover {
+    height: 46px;
+    padding: 8px 20px 8px 8px;
+    background-color: var(--bg-hover-color);
+    transition: var(--btn-transition);
+}
+
+.btn-email:hover .notice-content {
+    color: #fff;
+}
+
+.btn-email:active {
+    transform: scale(0.95);
+}
+
+.content-avatar {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    transition: var(--btn-transition);
+    position: relative;
+}
+
+.btn-email:hover .content-avatar {
+    width: 30px;
+    height: 30px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--bg-color-sup);
+}
+
+.user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-user {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    right: 1px;
+    bottom: 1px;
+    border-radius: 50%;
+    outline: solid 2px var(--bg-color);
+    background-color: var(--online-status);
+    transition: var(--btn-transition);
+    animation: active-status 2s ease-in-out infinite;
+}
+
+.btn-email:hover .status-user {
+    width: 7px;
+    height: 7px;
+    right: 1px;
+    bottom: 1px;
+    outline: solid 3px var(--bg-hover-color);
+}
+
+.notice-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 8px;
+    text-align: initial;
+    color: var(--text-color);
+}
+
+.username {
+    letter-spacing: -6px;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: var(--btn-transition);
+}
+
+.user-id {
+    font-size: 12px;
+    letter-spacing: -6px;
+    height: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: var(--btn-transition);
+}
+
+.lable-to-email {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transform: scaleY(1);
+    transition: var(--btn-transition);
+}
+
+.btn-email:hover .username {
+    height: auto;
+    letter-spacing: normal;
+    opacity: 1;
+    transform: translateY(0);
+    transition: var(--btn-transition);
+}
+
+.btn-email:hover .user-id {
+    height: auto;
+    letter-spacing: normal;
+    opacity: 1;
+    transform: translateY(0);
+    transition: var(--btn-transition);
+}
+
+.btn-email:hover .lable-to-email {
+    height: 0;
+    transform: scaleY(0);
+    transition: var(--btn-transition);
+}
+
+.lable-to-email,
+.username {
+    font-weight: 600;
+}
+
+@keyframes active-status {
+    0% {
+        background-color: var(--online-status);
+    }
+
+    33.33% {
+        background-color: #93e200;
+    }
+
+    66.33% {
+        background-color: #93e200;
+    }
+
+    100% {
+        background-color: var(--online-status);
+    }
+}

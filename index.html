@@ -7,18 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Boostrap Off -->
     <link rel="stylesheet" href="./public-bootstrap/css/bootstrap.min.css">
-    <!-- Link boostrap online Chưa cần dùng đến -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-
-    <!-- Link css1 -->
+    <!-- Link css-->
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/animation_loading.css">
-
-    <!-- Link google font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./public/css/animation.css">
 
     <!-- Link google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +59,7 @@
                         <a class="nav-link" href="./about.html">About Myself</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="margin-right:10px;" href="#">My Webstite Template</a>
+                        <a class="nav-link" style="margin-right:10px;" href="./template.html">My Webstite Template</a>
                     </li>
                     <!-- <li><a href="https://www.w3schools.com/html/default.asp" class="nav-link" target="_blank">Learning
                             HTML5 <span><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i></span></a></li>
@@ -113,35 +105,57 @@
                         I have studied and acquired knowledge of all aspects to develop this website.
                     </p>
                     <br>
+
                     <hr class="text-light">
+
                     <div class="mt-5">
-                        <span class="icon-links">
-                            <!-- Facebook -->
-                            <a href="https://www.facebook.com/sew80806/" target="_blank" id="facebook"
-                                class="fa-square-color">
-                                <i class="fa-brands fa-square-facebook fa-2xl me-4 ms-3"></i>
+                        <div class="wrapper">
+                            <a href="https://www.facebook.com/sew80806/" target="_blank" class="icon facebook">
+                                <span class="tooltip">Facebook</span>
+                                <i class="fa-brands fa-square-facebook"></i>
                             </a>
-                            <!-- Instagram -->
-                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="fa-square-color">
-                                <i class="fa-brands fa-square-instagram fa-2xl me-4"></i>
+                            <a href="https://www.linkedin.com/in/nguyenhoangson1606/" target="_blank"
+                                class="icon linkedin">
+                                <span class="tooltip">LinkedIn</span>
+                                <i class="fa-brands fa-linkedin"></i>
                             </a>
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/nguyen-son-74bb2a304/" target="_blank"
-                                class="fa-square-color">
-                                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            <a href="https://www.instagram.com/json_ngy/" target="_blank" class="icon instagram">
+                                <span class="tooltip">Instagram</span>
+                                <i class="fa-brands fa-square-instagram"></i>
                             </a>
-                        </span>
+                        </div>
                     </div>
-                    <a href="#" style="text-decoration:none;">
-                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-email">
-                            <i class="fa-solid fa-envelope fa-bounce me-2"></i>
-                            EMAIL
-                        </button>
-                        <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
+                    <div class="d-flex mt-5">
+                        <div class="btn-left pe-5">
+                            <button id="btn-to-email" class="btn-email" type="button">
+                                <div class="content-avatar">
+                                    <div class="status-user"></div>
+                                    <div class="avatar">
+                                        <i class="fa-solid fa-envelope" style="font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                                <div class="notice-content">
+                                    <div class="username">Nguyen Son</div>
+                                    <div class="lable-to-email">
+                                        Email directly
+                                    </div>
+                                    <div class="user-id">son71868@gmail.com</div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="btn-right ps-5">
+                            <button class="download-button btn-dowload-cv" type="button">
+                                <div class="my-cv">
+                                    My CV
+                                    <div class="download"><i class="fa-solid fa-download text-light"></i></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <button type="button" class="btn btn-outline-success mb-5 mt-5 btn-dowload-cv">
                             <i class="fa-solid fa-download fa-bounce me-2"></i>
                             DOWNLOAD CV
-                        </button>
-                    </a>
+                        </button> -->
                 </div>
 
                 <div class="col-lg-7 chua-anh">
@@ -352,22 +366,44 @@
                     </span> -->
                     <form id="contact-form" class="box-form">
                         <div class="wrapper-form">
-                            <label for="first">First Name <span class="red-text">*</span><input class="input-footer"
-                                    id="first" name="first" type="text" placeholder="First Name" required></label>
-                            <label for="last">Last Name <span class="red-text">*</span><input class="input-footer"
-                                    id="last" name="last" type="text" placeholder="Last Name" required></label>
-                            <label for="emails">Email <span class="red-text">*</span>
+                            <label for="first">
+                                First Name <span class="red-text">*</span><input class="input-footer" id="first"
+                                    name="first" type="text" placeholder="First Name" required>
+                            </label>
+                            <label for="last">
+                                Last Name <span class="red-text">*</span><input class="input-footer" id="last"
+                                    name="last" type="text" placeholder="Last Name" required>
+                            </label>
+                            <label for="emails">
+                                Email <span class="red-text">*</span>
                                 <!-- <input class="input-footer" id="emails" name="emails" type="email"
                                     placeholder="Email"> -->
                                 <input type="email" id="emails" class="input-footer" placeholder="Email" required>
                             </label>
-                            <label for="phone">Phone Number <span class="red-text">*</span><input class="input-footer"
-                                    id="phone" name="phone" type="text" placeholder="Phone Number" required></label>
-                            <label class="textarea" for="message">Message <span class="red-text">*</span><textarea
-                                    class="input-footer" name="message" id="message" style="width:100%; height:100%;"
-                                    placeholder="Your Message" required></textarea></label>
+                            <label for="phone">
+                                Phone Number <span class="red-text">*</span><input class="input-footer" id="phone"
+                                    name="phone" type="text" placeholder="Phone Number" required>
+                            </label>
+                            <label class="textarea-class" for="message">
+                                Message <span class="red-text">*</span>
+                                <textarea class="input-footer" name="message" id="message" placeholder="Your Message"
+                                    required></textarea>
+                            </label>
                         </div>
-                        <button class="btn-submit" id="submit" type="submit">Submit</button>
+                        <button id="submit" type="submit" class="btn-submit d-flex">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Send</span>
+                        </button>
+                        <!-- <button class="btn-submit" id="submit" type="submit">Submit</button> -->
                     </form>
                 </div>
                 <div class="text-center">
@@ -384,7 +420,7 @@
                     <i class="fas fa-phone me-2"></i> <span>+84 8541 12509</span><br>
                     <i class="fas fa-envelope me-2"></i> <span>son71868@gmail.com</span><br>
                     <i class="fab fa-linkedin me-2"></i> <span><a class="link-ft" target="_blank"
-                            href="https://www.linkedin.com/in/nguyen-son-74bb2a304/">Nguyen Son</a></span>
+                            href="https://www.linkedin.com/in/nguyenhoangson1606">Nguyen Son</a></span>
                 </div>
                 <div class="col-md-5 mt-5 mb-5">
                     <h1>Address</h1>
@@ -406,6 +442,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- FIxed -->
+
+    <div class="redes">
+        <a href="https://www.youtube.com/@nhs1606" class="youtube" target="_blank">
+            <i class="fa-brands fa-square-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nguyenhoangson1606" class="linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/songitcode" class="github" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://discord.gg/vfr22SCB" class="discord" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+    </div>
+    <!--  -->
 
     <!-- Link Script -->
     <script src="./public-bootstrap/js/bootstrap.bundle.min.js"></script>
