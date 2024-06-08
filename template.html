@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./public-bootstrap/css/bootstrap.min.css">
+    <!-- Link css1 -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/about.css">
+    <link rel="stylesheet" href="./public/css/animation-templatepage.css">
+
+    <!-- Link google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- IconLink -->
+    <link rel="stylesheet" href="./icon-font/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Son Dev</title>
+    <!-- Favicon logo Web -->
+    <link rel="icon" type="image/x-icon" href="./imgs/S-logo-removebg.png">
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Thêm đoạn mã xử lý sự kiện scroll ở đây
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('#nav-scroll');
+                if (window.scrollY >= 20) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg d-flex" id="nav-scroll"> <!-- sroll fixed fixed-top -->
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"> <img src="./imgs/S-logo-removebg.png" alt="sondev"
+                    class="logo-sondev" width="60px">
+            </a> <!---SonLaiNgoiCode--->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+                aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link active text-success" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Myself</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="margin-right:10px;" href="#">My Webstite Template</a>
+                    </li>
+                    <!-- <li><a href="https://www.w3schools.com/html/default.asp" class="nav-link" target="_blank">Learning
+                            HTML5 <span><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i></span></a></li>
+                    <li><a href="https://www.w3schools.com/css/default.asp" class="nav-link" target="_blank">Learning
+                            CSS <span><i class="fa-brands fa-css3-alt fa-xl text-primary"></i></span> </a></li> -->
+                    <div class="paste-button">
+                        <button class="button">Learned &nbsp; ▼</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.w3schools.com/html/default.asp" class="dropdown-item" target="_blank"
+                                id="top"><i class="fa-brands fa-html5 fa-lg text-warning me-2 "></i>HTML5</a>
+                            <a href="https://www.w3schools.com/css/default.asp" class="dropdown-item" target="_blank"
+                                id="middle"><i class="fa-brands fa-css3-alt fa-xl text-primary"></i> CSS</a>
+
+                            <a href="https://www.w3schools.com/css/default.asp" class="dropdown-item" target="_blank"
+                                id="middle"><img src="./imgs/c-sharp.png" width="21px" alt=""> C#</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main -->
+    <section class="header load-template">
+        <div class="loader">
+            <div class="wrapper">
+                <div class="catContainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 733 673" class="catbody">
+                        <path fill="#212121"
+                            d="M111.002 139.5C270.502 -24.5001 471.503 2.4997 621.002 139.5C770.501 276.5 768.504 627.5 621.002 649.5C473.5 671.5 246 687.5 111.002 649.5C-23.9964 611.5 -48.4982 303.5 111.002 139.5Z">
+                        </path>
+                        <path fill="#212121" d="M184 9L270.603 159H97.3975L184 9Z"></path>
+                        <path fill="#212121" d="M541 0L627.603 150H454.397L541 0Z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 158 564" class="tail">
+                        <path fill="#191919"
+                            d="M5.97602 76.066C-11.1099 41.6747 12.9018 0 51.3036 0V0C71.5336 0 89.8636 12.2558 97.2565 31.0866C173.697 225.792 180.478 345.852 97.0691 536.666C89.7636 553.378 73.0672 564 54.8273 564V564C16.9427 564 -5.4224 521.149 13.0712 488.085C90.2225 350.15 87.9612 241.089 5.97602 76.066Z">
+                        </path>
+                    </svg>
+                    <div class="text">
+                        <span class="bigzzz">Z</span>
+                        <span class="zzz">Z</span>
+                    </div>
+                </div>
+                <div class="wallContainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 126" class="wall">
+                        <line stroke-width="6" stroke="#7C7C7C" y2="3" x2="450" y1="3" x1="50"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="85" x2="400" y1="85" x1="100"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="122" x2="375" y1="122" x1="125"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="43" x2="500" y1="43"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="1.99391" x2="115.5" y1="43.0061" x1="115.5"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="2.00002" x2="189" y1="43.0122" x1="189"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="2.00612" x2="262.5" y1="43.0183" x1="262.5"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="2.01222" x2="336" y1="43.0244" x1="336"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="2.01833" x2="409.5" y1="43.0305" x1="409.5"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="43" x2="153" y1="84.0122" x1="153"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="43" x2="228" y1="84.0122" x1="228"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="43" x2="303" y1="84.0122" x1="303"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="43" x2="378" y1="84.0122" x1="378"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="84" x2="192" y1="125.012" x1="192"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="84" x2="267" y1="125.012" x1="267"></line>
+                        <line stroke-width="6" stroke="#7C7C7C" y2="84" x2="342" y1="125.012" x1="342"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 class="text-center text-success" style="position: relative; top: 25px;">
+                Thank you! Please leave your Email here.
+            </h3>
+            <div class="row text-center mt-5">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <form id="contact-form" class="box-form">
+                        <div class="wrapper-form">
+                            <label for="first">First Name <span class="red-text">*</span><input class="input-footer"
+                                    id="first" name="first" type="text" placeholder="First Name" required></label>
+                            <label for="last">Last Name <span class="red-text">*</span><input class="input-footer"
+                                    id="last" name="last" type="text" placeholder="Last Name" required></label>
+                            <label for="emails">Email <span class="red-text">*</span>
+                                <input type="email" id="emails" class="input-footer" placeholder="Email" required>
+                            </label>
+                            <label for="phone">Phone Number <span class="red-text">*</span><input class="input-footer"
+                                    id="phone" name="phone" type="text" placeholder="Phone Number" required></label>
+                            <label class="textarea" for="message">Message <span class="red-text">*</span><textarea
+                                    class="input-footer" name="message" id="message" style="width:100%; height:100%;"
+                                    placeholder="Your Message" required></textarea></label>
+                        </div>
+                        <button class="btn-submit" id="submit" type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="text-center">
+                    <div class="invalid-feedback" id="invalid-feedback">Invalid Email <br> Example: example@gmail.com
+                    </div>
+                    <div class="valid-feedback" id="valid-feedback">Valid Email</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row d-flex">
+                <div class="col-md-5 mt-5 mb-5">
+                    <h1>Contact</h1>
+                    <hr style="width: 30%;">
+                    <i class="fas fa-phone me-2"></i> <span>+84 8541 12509</span><br>
+                    <i class="fas fa-envelope me-2"></i> <span>son71868@gmail.com</span><br>
+                    <i class="fab fa-linkedin me-2"></i> <span><a class="link-ft" target="_blank"
+                            href="https://www.linkedin.com/in/nguyen-son-74bb2a304/">Nguyen Son</a></span>
+                </div>
+                <div class="col-md-5 mt-5 mb-5">
+                    <h1>Address</h1>
+                    <hr style="width: 30%;">
+                    <i class="fas fa-map-marker-alt me-2"></i> <span> Khanh Hai, TVT, Ca Mau (Home Town)</span><br>
+                    <i class="fas fa-map-marker-alt me-2"></i> <span> Di An, Lai Thieu, Binh Duong (Currently)</span>
+                </div>
+                <div class="col-md-2 mt-5 mb-5">
+                    <h1>Hobbies</h1>
+                    <hr style="width: 30%;">
+                    <i class="fas fa-code"></i><span> Coding</span><br>
+                    <i class="fas fa-bed"></i><span> Sleep</span><br>
+                </div>
+                <div class="container line-footer"></div>
+                <p class="container d-flex justify-content-center text-align-center"
+                    style="font-family: 'Times New Roman', Times, serif;">
+                    Website developed by Nguyen Son <span style="font-size: large; margin: 0 5px;"> &#169; </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link Script -->
+    <script src="./public-bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/script.js"></script>
+    <!-- Icon Script -->
+    <script src="./icon-font/js/all.min.js"></script>
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    <script src="/public/js/email.js"></script>
+</body>
+
+</html>
