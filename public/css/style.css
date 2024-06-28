@@ -430,8 +430,14 @@ section .anh-header0 {
   transition: all 2s;
 }
 
-.box-form {
-  /* border: 1px solid #008e0a; */
+.box-form input::placeholder,
+textarea::placeholder {
+  color: #00bf0d;
+}
+
+.box-form input,
+textarea {
+  color: #00bf0d;
 }
 
 .btn-submit {
