@@ -18,11 +18,26 @@ body {
   animation: slide-in-right 1s forwards;
 }
 
+.chua-anh {
+  animation: autoRotate 2s both;
+}
+
+@keyframes autoRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
 @keyframes slide-in-left {
   from {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -34,8 +49,58 @@ body {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.scrollTransition-left {
+  animation: autoScrollAnimation-left both;
+  animation-timeline: view(70% 5%);
+}
+
+.scrollTransition-right {
+  animation: autoScrollAnimation-right both;
+  animation-timeline: view(80% 5%);
+}
+
+.scrollTransition {
+  animation: autoScrollAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoScrollAnimation-left {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes autoScrollAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes autoScrollAnimation-right {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
