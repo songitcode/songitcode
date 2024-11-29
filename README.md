@@ -2,10 +2,10 @@
 # Hi, I'm Son, welcome to my profile
 
 
-
+```
 ### 📈 GitHub Stats:
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=songitcode&show_icons=true&theme=radical)  
-
+```
 ---
 
 ### 🛠 Language Breakdown:
